@@ -1,0 +1,113 @@
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f7f7f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+
+  /* إضافة صورة خلفية متحركة */
+  background-image: url("https://scontent-hbe1-1.xx.fbcdn.net/v/t39.30808-6/462342714_122123573444462720_4346916644453546695_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeGKyl9zuPdNloG-zLsVIHax2dIrIGJ1NAfZ0isgYnU0B3-jZRlGmTCwy1iMA0Auim81Td-BQb0CcXrnjQjD30-5&_nc_ohc=GbpqmVfLqMkQ7kNvgHA3WGh&_nc_oc=Adg31l8smKcxrihOt8cwFx7haivbnTdu8GrC3pSjKYJnZ32wUNDPcLoiOoUhEKe234E&_nc_zt=23&_nc_ht=scontent-hbe1-1.xx&_nc_gid=Ar9LsBydeu_J-fdAocdQ5vO&oh=00_AYB4JZyCO-VpiiiENKIBhQ1J9Mr4njFxqirkUQShns8T0w&oe=676A5719");
+  background-size: cover; /* يضمن ملء الشاشة بدون تشوه */
+  background-position: 0 0; /* بداية الصورة في أعلى اليسار */
+  background-repeat: no-repeat; /* يمنع تكرار الصورة */
+
+  /* إضافة الحركة للصورة الخلفية */
+  animation: moveBackground 30s linear infinite; /* حركة مستمرة عبر الزمن */
+}
+
+/* تعريف الحركة */
+@keyframes moveBackground {
+  0% {
+    background-position: 0 0; /* بداية الصورة */
+  }
+  100% {
+    background-position: 100% 100%; /* نهاية الصورة تتحرك بشكل أفقي وعمودي */
+  }
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  width: 90%;
+  text-align: center;
+  overflow-x: auto;
+  box-sizing: border-box;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background-color: #4caf50;
+  color: white;
+}
+
+td {
+  background-color: #f9f9f9;
+}
+
+.button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #45a049;
+}
+
+/* Media query لتصميم الأجهزة الصغيرة */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.5em;
+  }
+
+  table {
+    font-size: 12px;
+  }
+
+  .container {
+    padding: 15px;
+  }
+
+  .button {
+    width: 100%;
+    padding: 15px;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+  }
+
+  select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+  }
+}
